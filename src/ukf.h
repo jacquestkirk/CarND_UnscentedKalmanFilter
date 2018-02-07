@@ -119,6 +119,7 @@ public:
   void PredictMeanAndCovariance();
   void CalculateWeights(void);
   void PredictRadarMeasurement();
+  void PredictLidarMeasurement();
   void UpdateState(MeasurementPackage meas_package);
 };
 
