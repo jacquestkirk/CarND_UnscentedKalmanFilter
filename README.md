@@ -1,6 +1,27 @@
 # Unscented Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
 
+
+## Comments from Jason
+### Accuracy:
+Final RMSE is [0.066, 0.083, 0.33, 0.21]. this is below the target of [0.09,0.10,0.40,0.30]
+
+![alt text](./WriteupImages/FinalResult.jpg)
+
+### Algorithm:
+- The Sensor Fusion Algorithm starts in  [ukf.cpp](https://github.com/jacquestkirk/CarND_UnscentedKalmanFilter/blob/master/src/ukf.cpp) in the ProcessMeasurement() function.
+- The initialization method occurs in Initialize function in  [ukf.cpp](https://github.com/jacquestkirk/CarND_UnscentedKalmanFilter/blob/master/src/ukf.cpp).
+- Predict then update happens in [ukf.cpp](https://github.com/jacquestkirk/CarND_UnscentedKalmanFilter/blob/master/src/ukf.cpp) between lines 94-106.
+- Radar and Lidar data is selected in lines 18 and 21 of [ukf.cpp](https://github.com/jacquestkirk/CarND_UnscentedKalmanFilter/blob/master/src/ukf.cpp)
+
+### Extra:
+- With radar only RMSE is [0.207,0.252,0.366,0.265]
+- With lidar only RMSE is [0.170,0.147,0.615,0.253]
+
+
+## Original .md
+
+
 In this project utilize an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
 
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
